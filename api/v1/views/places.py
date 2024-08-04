@@ -1,4 +1,5 @@
-#!/usr/bin/python3     # Shebang line to specify the interpreter
+#!/usr/bin/python3
+# Shebang line to specify the interpreter
 """places view"""
 # Import necessary modules and classes from Flask and the project's packages
 from flask import abort, request, jsonify
