@@ -8,7 +8,7 @@ from models.place import Place
 from models.review import Review
 from models.user import User
 
-
+# do Blueprint for the API routes egal
 @app_views.route('/places/<place_id>/reviews', methods=['GET'])
 def reviews_of_place(place_id):
     """display all reviews of a place"""
