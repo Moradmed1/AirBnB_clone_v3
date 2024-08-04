@@ -2,21 +2,19 @@
 
 """amenities view"""
 from flask import abort, request, jsonify
-
 from api.v1.views import app_views
 from models import storage
 from models.amenity import Amenity
 from models.amenity import Amenity
 
 # Import necessary modules and classes from Flask and the project's packages
-
-
 @app_views.route('/amenities', methods=['GET'])
 def amenities():
     """display all amenities"""
     return jsonify([obj.to_dict() for obj in storage.all(Amenity).values()])
 
 # Define a route to check the status of the API
+
 @app_views.route('/amenities/<id>', methods=['GET'])
 def amenity_by_id(id):
     """display amenity by id"""
@@ -24,7 +22,6 @@ def amenity_by_id(id):
     if amenity:
         return amenity.to_dict()
     abort(404)
-
 
 @app_views.route('/amenities/<id>', methods=['DELETE'])
 def delete_amenity(id):
