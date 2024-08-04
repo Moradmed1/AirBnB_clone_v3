@@ -7,7 +7,7 @@ from models import storage, storage_t
 from models.place import Place
 from models.amenity import Amenity
 
-
+# Blueprint for the API routes
 @app_views.route('/places/<place_id>/amenities', methods=['GET'])
 def amenities_of_place(place_id):
     """display all amenities of a place"""
