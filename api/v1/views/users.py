@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 "users view"
 from flask import jsonify, abort, request
-
+# Blueprint for the API routes
 from api.v1.views import app_views
 from models.user import User
 from models import storage
 
-
+# Import User model
 @app_views.route('/users', methods=['GET'])
 def users():
     "Retrieves list of all users"
