@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# me and criss
+
 """amenities view"""
 from flask import abort, request, jsonify
 
@@ -8,6 +8,7 @@ from models import storage
 from models.amenity import Amenity
 from models.amenity import Amenity
 
+# Import necessary modules and classes from Flask and the project's packages
 
 
 @app_views.route('/amenities', methods=['GET'])
@@ -15,7 +16,7 @@ def amenities():
     """display all amenities"""
     return jsonify([obj.to_dict() for obj in storage.all(Amenity).values()])
 
-
+# Define a route to check the status of the API
 @app_views.route('/amenities/<id>', methods=['GET'])
 def amenity_by_id(id):
     """display amenity by id"""
@@ -62,6 +63,5 @@ def update_amenity(id):
     for k, v in data.items():
         if k not in ['id', 'created_at', 'updated_at']:
             setattr(amenity, k, v)
-    storage.save()
     storage.save()
     return amenity.to_dict()
