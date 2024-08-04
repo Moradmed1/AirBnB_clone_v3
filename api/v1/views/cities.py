@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# me from api.pv
 """"Cities views"""
 from flask import abort, request, jsonify
 
@@ -54,7 +55,7 @@ def create_city(state_id):
     new_city.save()
     return new_city.to_dict(), 201
 
-
+# all api 
 @app_views.route('/cities/<id>', methods=['PUT'])
 def update_city(id):
     city = storage.get(City, id)
