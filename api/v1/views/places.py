@@ -7,6 +7,7 @@ from flask import abort, request, jsonify
 from api.v1.views import app_views
 from models import storage
 from models.place import Place
+# Blueprint for the API routes
 from models.city import City
 from models.user import User
 from models.state import State
