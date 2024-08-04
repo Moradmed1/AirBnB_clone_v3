@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# me from api.pv
+# Import necessary modules and classes from Flask and the project's packages
 """"Cities views"""
 from flask import abort, request, jsonify
 
@@ -8,6 +8,7 @@ from models import storage
 from models.state import State
 from models.city import City
 
+# Define a route to get all cities of a specific state
 
 @app_views.route('/states/<state_id>/cities', methods=['GET'])
 def cities_of_state(state_id):
@@ -18,7 +19,7 @@ def cities_of_state(state_id):
 
     abort(404)
 
-
+# Define a route to get a city by its ID
 @app_views.route('/cities/<id>', methods=['GET'])
 def city_by_id(id):
     "Get a city by ID"
