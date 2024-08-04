@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#tak 2
 """Entry point of the api"""
 import os
 from flask_cors import CORS
