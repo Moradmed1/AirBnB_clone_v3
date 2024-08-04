@@ -10,6 +10,7 @@ from models.state import State
 from models.user import User
 from models import storage
 
+# Import necessary modules and classes from Flask and the project's packages
 
 @app_views.route('/status', methods=['GET'])
 def status():
