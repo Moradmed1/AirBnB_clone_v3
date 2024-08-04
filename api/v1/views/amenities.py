@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+# me and criss
 """amenities view"""
 from flask import abort, request, jsonify
 
 from api.v1.views import app_views
 from models import storage
 from models.amenity import Amenity
+from models.amenity import Amenity
+
 
 
 @app_views.route('/amenities', methods=['GET'])
@@ -59,5 +62,6 @@ def update_amenity(id):
     for k, v in data.items():
         if k not in ['id', 'created_at', 'updated_at']:
             setattr(amenity, k, v)
+    storage.save()
     storage.save()
     return amenity.to_dict()
