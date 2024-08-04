@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """index view"""
+# Define a route to get statistics about each object type
 from flask import jsonify
 from api.v1.views import app_views
 from models.amenity import Amenity
@@ -16,7 +17,7 @@ from models import storage
 def status():
     """display, 'status': 'ok'"""
     return jsonify({'status': "OK"})
-
+# Define a route to check the status of the API
 
 @app_views.route('/stats', methods=['GET'])
 def stats():
