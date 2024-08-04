@@ -1,9 +1,7 @@
-#!/usr/bin/python3     # Shebang line to specify the interpreter
+#!/usr/bin/python3
 """places view"""
 # Import necessary modules and classes from Flask and the project's packages
 from flask import abort, request, jsonify
-# Flask modules for handling requests and responses
-# Blueprint for the API routes
 from api.v1.views import app_views
 from models import storage
 from models.place import Place
