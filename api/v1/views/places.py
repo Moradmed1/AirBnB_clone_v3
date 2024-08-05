@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """places view"""
-# Import necessary modules and classes from Flask and the project's packages
+
 from flask import abort, request, jsonify
 from api.v1.views import app_views
 from models import storage
 from models.place import Place
-# Blueprint for the API routes
+
 from models.city import City
 from models.user import User
 from models.state import State
 from models.amenity import Amenity
 
-# Define a route to get all places of a specific city
+
 @app_views.route('/cities/<city_id>/places', methods=['GET'])
 def places_of_city(city_id):
     """display all places of a city"""
