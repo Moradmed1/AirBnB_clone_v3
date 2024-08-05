@@ -56,4 +56,3 @@ def link_amenity_place(place_id, amenity_id):
     storage.save()
 
     return amenity.to_dict(), 201
-
