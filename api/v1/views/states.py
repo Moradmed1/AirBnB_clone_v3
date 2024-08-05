@@ -12,7 +12,7 @@ def states():
     """display all states"""
     return jsonify([obj.to_dict() for obj in storage.all(State).values()])
 
-# all for t for the API routes
+
 @app_views.route('/states/<id>', methods=['GET'])
 def state_by_id(id):
     """display state by id"""
