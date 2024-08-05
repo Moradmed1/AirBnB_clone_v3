@@ -11,7 +11,6 @@ from models.user import User
 from models import storage
 
 
-
 @app_views.route('/status', methods=['GET'])
 def status():
     """display, 'status': 'ok'"""
@@ -26,3 +25,4 @@ def stats():
         stats[cls.__tablename__] = storage.count(cls)
 
     return jsonify(stats)
+
